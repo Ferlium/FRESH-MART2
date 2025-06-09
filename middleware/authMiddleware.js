@@ -1,4 +1,4 @@
-const user = require("../models/user");
+const User = require("../models/user");
 
 const verifyUser = async (req, res, next) => {
   try {
