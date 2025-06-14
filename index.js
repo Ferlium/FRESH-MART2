@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const tokenRoutes = require("./routes/token");
 
 
 dotenv.config(); // Load environment variables
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/products", require("./routes/products"));
 app.use("/api/orders", require("./routes/orders"));
+app.use("/api/token", tokenRoutes);
 
 
 const PORT = process.env.PORT || 5000;

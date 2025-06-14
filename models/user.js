@@ -8,6 +8,8 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   role: { type: String, enum: ["user", "admin"], default: "user" },
+  resetToken: { type: String, default: null },
+  tokenExpiration: { type: Date, default: null },
 }, { timestamps: true });
 
 // Hash password before saving
@@ -26,7 +28,3 @@ const User = new mongoose.model("User", userSchema)
 
 module.exports = User
 
-// module.exports = mongoose.model("User", userSchema);
-
-
-// const Auth = new mongoose.model("Auth", userSchema)
