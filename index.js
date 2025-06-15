@@ -37,5 +37,5 @@ mongoose.connect(process.env.MONGODB_URL)
 
   // Health Check Route
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "THE BEST OR NOTHING!" });
+  res.status(200).json({ message: "EJIENRY FRESHMART; THE BEST OR NOTHING!" });
 });
